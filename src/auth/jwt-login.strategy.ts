@@ -3,7 +3,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-local';
 
 @Injectable()
-export class LoginStarttegy extends PassportStrategy(Strategy) {
+export class LoginStrategy  extends PassportStrategy(Strategy) {
     constructor(){
         super()
     }
