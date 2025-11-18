@@ -7,6 +7,7 @@ import { ConfigModule, ConfigType } from '@nestjs/config';
 import { JWTConfig } from './shared/config/jwt.config';
 import { DBConfig } from './shared/config/db.config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { MongooseModule } from '@nestjs/mongoose';
       useFactory: (mongoConfig: ConfigType<typeof DBConfig>) => ({
         uri: mongoConfig.mongoUrl
       })
-    })],
+    }),
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
