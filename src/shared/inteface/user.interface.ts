@@ -1,7 +1,7 @@
-import { ObjectId } from "mongoose"
+import { Types } from "mongoose"
 
 export interface IUser {
-    _id : ObjectId
+    _id : Types.ObjectId
     userName : string
     emailId : string
     password : string
