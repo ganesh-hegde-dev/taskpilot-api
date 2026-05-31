@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { UserLoginDTO } from '../dto/user.dto';
-import { UserRepository } from 'src/domain/repository/user.repository';
-import { comparePassword } from 'src/shared/utils/bcrypt';
-import { AuthService } from 'src/auth/auth.service';
+import { UserRepository } from '../../../domain/repository/user-repository';
+import { comparePassword } from '../../../shared/utils/bcrypt';
+import { AuthService } from '../../../auth/auth.service';
 
 @Injectable()
 export class LoginService {

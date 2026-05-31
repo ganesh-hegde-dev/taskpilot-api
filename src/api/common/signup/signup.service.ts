@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { UserSignUpDTO } from '../dto/user.dto';
-import { UserRepository } from 'src/domain/repository/user.repository';
+import { UserRepository } from '../../../domain/repository/user-repository';
 import { hashPassword } from 'src/shared/utils/bcrypt';
 
 @Injectable()
